@@ -1,7 +1,8 @@
-# kotlin-rest-spring
+# kotlin-rest-spring-swagger
 Segue uma simples implementação utilizando:
 - kotlin
 - Springboot
+- Swagger
 - gradle
 
 ## Clonar o projeto
