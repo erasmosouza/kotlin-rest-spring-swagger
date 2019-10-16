@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RestController
 import java.util.concurrent.atomic.AtomicLong
 
 @RestController
-class GreetingController {
+class HealthController {
 
-    var count = AtomicLong();
+    val counter = AtomicLong()
 
-    @GetMapping("/greeting")
-    fun hello(@RequestParam("name", defaultValue = "World") name: String) =
-        Greeting(count.incrementAndGet(), "Hello, $name")
+    @GetMapping("/check")
+    fun check(@RequestParam("name", defaultValue = "World") name: String) =
+        Health(counter.incrementAndGet(), "Hello, $name")
 }
