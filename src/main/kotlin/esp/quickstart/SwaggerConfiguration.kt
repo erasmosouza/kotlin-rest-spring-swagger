@@ -12,8 +12,6 @@ import springfox.documentation.service.Contact
 import springfox.documentation.service.VendorExtension
 import java.util.ArrayList
 
-
-
 @Configuration
 @EnableSwagger2
 class SwaggerConfiguration {
@@ -26,10 +24,7 @@ class SwaggerConfiguration {
         .build()
         .apiInfo(apiInfo())
 
-
     fun apiInfo(): ApiInfo {
-
-        val vendorExtensions = ArrayList<VendorExtension<*>>()
 
         return ApiInfo(
             "Minha API Rest",
@@ -39,7 +34,7 @@ class SwaggerConfiguration {
             Contact("Erasmo Pinheiro", "www.erasmopinheiro.com", "erasmo@erasmopinheiro.com"),
             "Licence of API",
             "www.erasmopinheiro.com/licence",
-            vendorExtensions
+            ArrayList<VendorExtension<*>>()
         )
     }
 }
