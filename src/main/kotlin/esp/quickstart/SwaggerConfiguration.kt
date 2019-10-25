@@ -24,9 +24,7 @@ class SwaggerConfiguration {
         .build()
         .apiInfo(apiInfo())
 
-    fun apiInfo(): ApiInfo {
-
-        return ApiInfo(
+    fun apiInfo(): ApiInfo = ApiInfo(
             "Minha API Rest",
             "Descricao da minha api",
             "V0.3",
@@ -36,5 +34,5 @@ class SwaggerConfiguration {
             "www.erasmopinheiro.com/licence",
             ArrayList<VendorExtension<*>>()
         )
-    }
+
 }
